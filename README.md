@@ -17,6 +17,8 @@
 
 Use ANSI C or C99 without extension.
 
+When you use ANSI C the only allowed exception is *variadic macros* (`-Wno-variadic-macro` flag with gcc).
+
 ## Indentation
 
 Indents using tabs and tabs are 4 characters.
