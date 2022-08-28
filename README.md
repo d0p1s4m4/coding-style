@@ -57,3 +57,4 @@ But not with: `sizeof`, `typeof`, `alignof`, `__attribute__`.
 - [ANSSI - guide - Règles de programmation pour le développement sécurisé de logiciels en langage C - v1.2](https://www.ssi.gouv.fr/uploads/2020/05/anssi-guide-regles_de_programmation_pour_le_developpement_securise_de_logiciels_en_langage_c-v1.2.pdf)
 - [JPL Institutional Coding Standard for the C Programming Language](https://andrewbanks.com/wp-content/uploads/2019/07/JPL_Coding_Standard_C.pdf)
 - [MISRA C:2004 and MISRA AC AGC Coding Rules](https://mathworks.com/help/bugfinder/ug/misra-c-coding-rules.html)
+- [Airbus security lab - Getting the maximum of your C compiler, for security](https://airbus-seclab.github.io/c-compiler-security/)
