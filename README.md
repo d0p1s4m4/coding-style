@@ -8,16 +8,17 @@
 - [Line length](#line-length)
 - [Comments](#comments)
 - [Braces and Spaces](#braces-and-spaces)
-  * [Braces](#braces)
-  * [Space](#space)
+	* [Braces](#braces)
+	* [Space](#space)
+- [Preprocessor](#preprocessor)
 - [Functions](#functions)
 - [Usefull links](#usefull-links)
 
 ## C Features
 
-Use ANSI C or C99 without extension.
+Use ANSI C or C99 without extension (with the exception of `__asm__` and `__attribute__((packed))`).
 
-When you use ANSI C the only allowed exception is *variadic macros* (`-Wno-variadic-macro` flag with gcc).
+When you use ANSI C the only allowed exception are *variadic macros* (`-Wno-variadic-macro` flag with gcc) and *long long* (`-Wno-long-long`).
 
 ## Indentation
 
@@ -42,8 +43,21 @@ Comments use `/* ... */` not `//`
 ```c
 if (my_func() < 0)
 {
-    (...)
+	(...)
 }
+```
+
+Exception are `struct`, `enum`, and array initialization.
+
+```c
+enum ei_machine {
+	MACH_X86 = 0x03,
+	(...)
+};
+
+static char array[] = {
+	'a', 'b', 'c'
+};
 ```
 
 ### Space
@@ -51,6 +65,26 @@ if (my_func() < 0)
 Use space after: `if`, `switch`, `case`, `for`, `do`, `while`.
 
 But not with: `sizeof`, `typeof`, `alignof`, `__attribute__`.
+
+## Preprocessor
+
+## Functions
+
+Return type **MUST** be on it's own line int function definition, it's make function easier to find (eg: `^function_name`). This do not apply to prototype.
+
+When a function take no argument void **MUST** be used (eg: `int my_function(void);`).
+
+```c
+int my_function_prototype(void);
+
+int
+main(int argc, char *argv[])
+{
+	(...)
+
+	return (0);
+}
+```
 
 ## Usefull links
 
